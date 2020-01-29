@@ -1,0 +1,940 @@
+/* fonts */
+@font-face {
+    font-family: 'SourceSansPro_Light';
+    src: url('../fonts/sourcesanspro/sourcesansprolight.woff2') format('woff2'), url('../fonts/sourcesanspro/sourcesansprolight.woff') format('woff'), url('../fonts/sourcesanspro/sourcesansprolight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SourceSansPro_Regular';
+    src: url('../fonts/sourcesanspro/sourcesanspro.woff2') format('woff2'), url('../fonts/sourcesanspro/sourcesanspro.woff') format('woff'), url('../fonts/sourcesanspro/sourcesanspro.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SourceSansPro_Bold';
+    src: url('../fonts/sourcesanspro/sourcesansprobold.woff2') format('woff2'), url('../fonts/sourcesanspro/sourcesansprobold.woff') format('woff'), url('../fonts/sourcesanspro/sourcesansprobold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family:"Gobold";
+    src:url("../fonts/gobold/Gobold.eot") format("eot"),url("../fonts/gobold/Gobold.woff") format("woff"),url("../fonts/gobold/Gobold.ttf") format("truetype"),url("../fonts/gobold/Gobold.svg") format("svg");
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face {
+    font-family:"OpenSans-light";
+    src: url('../fonts/Open_Sans/Open-Sans-Light.woff2') format('woff2'), url('../fonts/Open_Sans/OpenSans-Light.woff') format('woff'), url('../fonts/Open_Sans/OpenSans-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style:normal;
+}
+
+/* main */
+body {
+    font-family: 'OpenSans-light';
+    color: white;
+    font-size: 14px;
+    min-width: 200px;
+    background: white;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+span {
+    font-family: "Gobold";
+}
+
+h1, h2, h3 {
+    position: relative;
+    font-family: "Gobold";
+    padding-bottom: 20px;
+}
+
+h1::after, h2::after, h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    width: 80px;
+    height: 1px;
+    background: white;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.text-decoration-underline {
+    text-decoration: underline;
+}
+
+.text-red {
+    color: #9e171d;
+}
+
+.bg-red {
+    background: #9e171d;
+}
+
+.bg-purple {
+    background: #161616;
+}
+
+.bg-bkack {
+    background: #0d0d0d;
+}
+
+a:focus {
+    border: 0;
+    outline: 0;
+}
+
+button:focus {
+    border: 0;
+    outline: 0;
+}
+
+/* header */
+header {
+    background-image: url(../img/bg.jpg);
+}
+
+.navbar {
+    position: static;
+}
+
+    /* logo */
+    .navbar-brand {
+        position: relative;
+        z-index: 100;
+    }
+    .logo-icon {
+        width: 32px;
+        height: 39px;
+    }
+
+    .logo_sydney {
+        padding-left: 10px;
+        padding-top: 2px;
+        font-size: 10.7px;
+        font-family: 'SourceSansPro_Bold';
+        line-height: 1.3;
+    }
+
+    .logo_sydney div:first-child {
+        font-size: 17.35px;
+    }
+
+    .logo_sydney div span {
+        font-family: "SourceSansPro_Regular";
+    }
+
+    .logo_sydney div + div {
+        color: #9e171d;
+    }
+
+    header .second {
+        position: relative;
+        z-index: 100;
+        display: none;
+    }
+
+    .collapse.show + .first {
+        display: none;
+    }
+
+    .collapse.show + .first + .second {
+        display: block;
+    }
+
+    /* burger */
+    .navbar-toggler {
+        z-index: 100;
+    }
+    
+    .navbar-toggler span:first-child {
+        position: relative;
+        width: 2rem;
+        height: 1px;
+        background: white;
+    }
+    .navbar-toggler span::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 6px;
+        background: white;
+        width: 2rem;
+        height: 1px;
+    }
+    .navbar-toggler span::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 6px;
+        background: white;
+        width: 2rem;
+        height: 1px;
+    }
+
+    .navbar-collapse {
+        transition: all 0s ease;
+    }
+
+    /* nav links */
+
+    .navbar-nav {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+    }
+    
+    .navbar-nav {
+        margin: 0 auto;
+    }    
+        
+
+    .nav-link {
+        font-size: 13px;
+        color: white;
+    }
+
+    header li {
+        border: 1px solid #df676d;
+    }
+
+    .nav-block {
+        left: 0;
+        right: 0;
+        top: 0;
+        padding-top: 73px;
+        z-index: 50;
+    }
+
+    /* show action */
+
+    .navbar-brand img + img {
+        display: none;
+    }
+    
+    .collapse.show + .navbar-brand img {
+        display: none;
+    }
+
+    .collapse.show + .navbar-brand img +img {
+        display: block;
+    }
+
+    .collapse.show + .navbar-brand div + div {
+        color: white;
+    }
+
+    .collapse.show + a + button span {
+        transform-origin: center;
+        transform: rotate(45deg);
+    }
+
+    .collapse.show + a + button span::before {
+        transform: rotate(90deg) translateX(-5px);
+    }
+
+    .collapse.show + a + button span::after {
+        display: none;
+    }
+
+/* main car/first block */
+
+    .carusel-item {
+        position: relative;
+    }
+
+    .carousel-control-next-personal {
+        position: absolute;
+        z-index: 1;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        color: #fff;
+        text-align: center;
+        opacity: .5;
+        transition: opacity .15s ease;
+        /* ------- */
+        left: 65px;
+        bottom: 0;
+        width: 79%;
+        height: 40px;
+    }
+
+    .carousel-control-next-icon {
+        position: relative;
+        background: white;
+        width: 20px;
+        height: 1px;
+        right: 45%;
+    }
+
+    .carousel-control-next-icon::after {
+        content: "";
+        position: absolute;
+        right: -8px;
+        bottom: -5px;
+        background: transparent;
+        border-top: 1px solid white;
+        border-right: 1px solid white;
+        border-bottom: 1px solid transparent;
+        border-left: 1px solid transparent;
+        width: 10px;
+        height: 10px;
+        transform: rotate(45deg);
+    }
+
+    .main-car h2::after {
+        color: #6c757d;
+    }
+
+    .main-car article {
+        padding-top: 80px;
+        margin-top: 80px;
+        background-image: url(../img/bg_info.jpg);
+    }
+
+    .main-car-img {
+        position: absolute;
+        left: 7%;
+        top: 0;
+        z-index: 5;
+        width: 320px;
+        height: auto;
+    }
+
+/* info second-block */
+    .info div{
+        min-height: 500px;
+    }
+
+    .first-info {
+        background-image: url(../img/car1_bg.jpg);
+        background-position: 70%;
+        background-attachment: inherit;
+    }
+
+    .second-info {
+        background-image: url(../img/car2_bg.jpg);
+        background-position: 90%;
+        background-attachment: inherit;
+    }
+
+    .third-info {
+        background-image: url(../img/car3_bg.jpg);
+        background-position: 20%;
+        background-attachment: inherit;
+    }
+
+    .info-nav {
+        position: absolute;
+        left: auto;
+        bottom: 10%;
+        display: block;
+        width: 44px;
+        height: 44px;
+        border: 1px solid white;
+    }
+
+    .info-nav::before {
+        content: "";
+        position: absolute;
+        left: 20px;
+        bottom: 13px;
+        background: transparent;
+        width: 1em;
+        height: 1em;
+        border-top: 1px solid white;
+        border-right: 1px solid white;
+        transform: rotate(45deg);
+    }
+
+    .info-nav::after {
+        content: "";
+        position: absolute;
+        left: 5px;
+        bottom: 20px;
+        background: white;
+        width: 1.5em;
+        height: 1px;
+    }
+
+    .info div::after {
+        content: "";
+        position: absolute;
+        left: -1px;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        opacity: 0.9;
+        background-color: #161616;
+        z-index: 0;
+    }
+
+    .info div:nth-child(2):after {
+        background-color: #0e0e0e;
+    }
+
+    .info div:hover:after{
+        background-color: red;
+        opacity: 0.4;
+    }
+
+    .info article {
+        height: 100%;
+        position: relative;
+        z-index: 5;
+    }
+
+/* slider third block */
+    .fleet-info h2 {
+        margin: 0;
+    }
+
+    .fleet-info h2::after {
+        background: red;
+    }
+
+    .fleet-info p {
+        margin-bottom: 2rem;
+    }
+
+    .owl-carousel .owl-item div img {
+        height: auto;
+    }
+
+    .owl-item a p{
+        margin-top: 15px;
+        font-family: "Gobold";
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 16px;
+        color: black;
+        text-align: center;
+    }
+
+    .first-carousel .owl-nav button.owl-prev {
+        position: absolute;
+        right: 50px;
+        top: -100px;
+        width: 44px;
+        height: 44px;
+        border: 1px solid black;
+    }
+
+    .first-carousel .owl-nav button.owl-prev::before {
+        content: "";
+        position: absolute;
+        left: 10px;
+        bottom: 13px;
+        background: transparent;
+        width: 1em;
+        height: 1em;
+        border-top: 1px solid black;
+        border-right: 1px solid black;
+        transform: rotate(225deg); 
+    }
+
+    .first-carousel .owl-nav button.owl-prev::after {
+        content: "";
+        position: absolute;
+        left: 15px;
+        bottom: 20px;
+        background: black;
+        width: 1.5em;
+        height: 1px;
+    }
+
+    .first-carousel .owl-nav button.owl-next {
+        position: absolute;
+        right: 0;
+        top: -100px;
+        width: 44px;
+        height: 44px;
+        border: 1px solid black;  
+    }
+
+    .first-carousel .owl-nav button.owl-next::before {
+        content: "";
+        position: absolute;
+        left: 20px;
+        bottom: 13px;
+        background: transparent;
+        width: 1em;
+        height: 1em;
+        border-top: 1px solid black;
+        border-right: 1px solid black;
+        transform: rotate(45deg);
+    }
+
+    .first-carousel .owl-nav button.owl-next::after {
+        content: "";
+        position: absolute;
+        left: 5px;
+        bottom: 20px;
+        background: black;
+        width: 1.5em;
+        height: 1px;
+    }
+
+    .owl-item:hover .item-info {
+        display: block!important;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(255, 0, 0, 0.582);
+    }
+
+    .owl-item .item-info p {
+        margin: 0px;
+        font-family: "OpenSans-light";
+        font-size: 9px;
+        color: white;
+    }
+
+/* contact block */
+    .contact-info {
+        background: #161616;
+    }
+
+    .contact-info div div div h2 {
+        margin-bottom: 0;
+    }
+
+    .contact h2:after {
+        background: red;
+    }
+
+    /* form */
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    input[type="checkbox"] + label {
+        cursor: pointer;
+    }
+
+    input[type="checkbox"] + label::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 20px;
+        height: 20px;
+        border: 1px solid red;
+    }
+
+    input[type="checkbox"]:checked+label:after{
+        content: "";
+        position: absolute;
+        top: -2px;
+        right: 5px;
+        border-bottom: 2px solid white;
+        border-right: 2px solid white;
+        width: 10px;
+        height: 17px;
+        transform: rotate(45deg);
+    }
+
+    form div:nth-child(2) select {
+        background: #161616;
+        color: #82878a;
+    }
+
+    form div:nth-child(3) div input {
+        border-radius: 0;
+    }
+
+    form div:nth-child(3) div label:after {
+        content: "*";
+        color: red;
+    }
+
+    .btn {
+        background: #161616;
+        color: #82878a;
+        border-radius: 0;
+    }
+
+    /* estimate */
+    .estimate a {
+        position: relative;
+        color: white;
+    }
+
+    .estimate a::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 5px;
+        width: 10px;
+        height: 10px;
+        border-left: 3px solid white;
+        border-bottom: 3px solid white;
+        transform: rotate(45deg);
+    }
+
+    .price {
+        font-family: "gobold";
+        font-size: 30px;
+    }
+
+/* testimonials */
+    .testimonials {
+        background-image: url(../img/bg.jpg);
+    }
+
+    .testimonials h2 {
+        margin: 0;
+    }
+
+    .item div {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+    }
+
+    .photo-people-first {
+        background-image: url(../img/businessman.jpg);
+        background-position-x: 35%;
+    }
+
+    .photo-people-second {
+        background-image: url(../img/photographer.jpg);
+        background-position-x: 35%;
+    }
+
+    .photo-people-third {
+        background-image: url(../img/secretary.jpg);
+        background-position-x: 65%;
+    }
+
+    .item p + p {
+        font-family: "gobold";
+    }
+
+    .second-corusel .owl-nav button.owl-prev {
+        position: absolute;
+        right: 50px;
+        top: -100px;
+        width: 44px;
+        height: 44px;
+        border: 1px solid red;
+    }
+
+    .second-corusel .owl-nav button.owl-prev::before {
+        content: "";
+        position: absolute;
+        left: 10px;
+        bottom: 13px;
+        background: transparent;
+        width: 1em;
+        height: 1em;
+        border-top: 1px solid red;
+        border-right: 1px solid red;
+        transform: rotate(225deg); 
+    }
+
+    .second-corusel .owl-nav button.owl-prev::after {
+        content: "";
+        position: absolute;
+        left: 15px;
+        bottom: 20px;
+        background: red;
+        width: 1.5em;
+        height: 1px;
+    }
+
+    .second-corusel .owl-nav button.owl-next {
+        position: absolute;
+        right: 0;
+        top: -100px;
+        width: 44px;
+        height: 44px;
+        border: 1px solid red;  
+    }
+
+    .second-corusel .owl-nav button.owl-next::before {
+        content: "";
+        position: absolute;
+        left: 20px;
+        bottom: 13px;
+        background: transparent;
+        width: 1em;
+        height: 1em;
+        border-top: 1px solid red;
+        border-right: 1px solid red;
+        transform: rotate(45deg);
+    }
+
+    .second-corusel .owl-nav button.owl-next::after {
+        content: "";
+        position: absolute;
+        left: 5px;
+        bottom: 20px;
+        background: red;
+        width: 1.5em;
+        height: 1px;
+    }
+
+
+/* footer */
+    footer h2 {
+        color: black;
+    }
+
+    footer h2:after {
+        background: red;
+    }
+
+    .privacy {
+        background: rgb(199, 199, 199);
+    }
+
+    .social-block a{
+        width: 29px;
+        height: 29px;
+        background-image: url(../img/sprite.png);
+    }
+
+    .social-block a:nth-child(1):hover{
+        background-position: 0 30px;
+    }
+
+    .social-block a:nth-child(2){
+        background-position: 29px 0;
+    }
+
+    .social-block a:nth-child(2):hover{
+        background-position: 29px 30px;
+    }
+
+    .social-block a:nth-child(3){
+        background-position: 58px 0;
+    }
+
+    .social-block a:nth-child(3):hover{
+        background-position: 58px 30px;
+    }
+
+
+/* media запросы */
+    @media (min-width: 565.98px) {
+        /* logo */
+        .logo-icon {
+            width: 41px;
+            height: 48px;
+        }
+
+        .logo_sydney {
+            padding-top: 1px;
+            font-size: 13.5px;
+        }
+
+        .logo_sydney div:first-child {
+            font-size: 21.96px;
+        }
+
+        /* nav */
+        header li {
+            border: 0;
+        }
+
+        .d-sm-none {
+            display: none;
+        }
+
+    }
+
+    @media (min-width: 767.98px) {
+        /* logo */
+        .logo-icon {
+            width: 51px;
+            height: 61px;
+        }
+
+        .logo_sydney {
+            padding-top: 2px;
+            font-size: 16.6px;
+        }
+
+        .logo_sydney div:first-child {
+            font-size: 27.11px;
+        }
+
+        /* nav */
+        .nav-block {
+            padding-top: 87px;
+        }
+
+        /* first car */
+        .carousel-control-next-personal {
+            left: 64%;
+            bottom: 14.5%;
+            width: 33%;
+        }
+    
+        .main-car article {
+            padding: 3rem 3rem 3rem 15rem;
+            margin-top: 0;
+        }
+    
+        .main-car-img {
+            left: 0px;
+            top: 30%;
+            width: 55%;
+        }
+
+        /* fleet block */
+
+        .owl-carousel .owl-item a div img {
+            height: 6rem;
+        }    
+
+    }
+    @media (min-width: 991.98px) {
+        /* nav */
+        .navbar-nav li {
+            padding: 0 14px;
+        }
+
+        .nav-link {
+            border-bottom: 2px solid transparent;
+        }
+        
+        .nav-link:hover {
+            color: white;
+            border-bottom: 2px solid white;
+            box-sizing: border-box;
+        }
+
+        /* first car */
+        .carousel-control-next-personal {
+            bottom: 12.5%;
+        }
+    
+        .main-car article {
+            padding: 3rem 5rem 3rem 6rem;
+        }
+    
+        .main-car-img {
+            top: 15%;
+        }
+
+        .main-car p {
+            margin-bottom: 5rem;
+        }
+
+        /* fleet block */
+
+        .owl-carousel .owl-item a div img {
+            height: 10rem;
+        }    
+
+    
+    @media (min-width: 1199.98px) {
+        /* nav */
+        .navbar-nav li {
+            padding: 0 15px;
+        }
+
+        .navbar-toggler span::after {
+            bottom: 7px;
+        }    
+
+        /* first car */
+        .carousel-control-next-personal {
+            left: 72%;
+            bottom: 11.5%;
+            width: 28%;
+        }
+    
+        .main-car article {
+            padding: 3rem 6rem 3rem 12rem;
+            margin-top: 0;
+        }
+    
+        .main-car-img {
+            left: 0px;
+            top: 7%;
+            width: 59%;
+        }
+
+        .main-car p {
+            margin-bottom: 8rem;
+        }
+
+        /* second block */
+        .first-info article{
+            max-width: 380px;
+        }
+
+        .second-info {
+            max-width: 380px;
+        }
+
+        .third-info article{
+            max-width: 380px;
+        }
+
+        /* fleet block */
+
+        .owl-carousel .owl-item a div img {
+            height: 11rem;
+        }
+        
+        .first-carousel .owl-nav button.owl-prev {
+            left: -60px;
+            bottom: 100px;
+            top: auto;
+        }
+        
+        .first-carousel .owl-nav button.owl-next {
+            right: -60px;
+            bottom: 100px;
+            top: auto;
+        }    
+
+    }
+
+
+/* 
+container
+container-fluid
+row
+col/col-sm-auto/col-md/col-lg/col-xl
+no-gutters
+w-100
+justify-content-start/center/end/around/between
+align-items-start/center/end
+mt-6/ml-6/mr-6/mb-auto
+pt-6/pl-6/pr-6/pb-auto
+row-cols-2
+d-none
+d-md-block
+order-md-1/first/last
+offset-md-4/0
+
+second class:
+border - 1px solid #dee2e6!important;
+bg-light - #f8f9fa!important;
+*/
